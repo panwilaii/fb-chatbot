@@ -1,0 +1,24 @@
+{
+  "name": "fbbot",
+  "version": "0.0.1",
+  "description": "facebook bot example",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel index.js -d dist",
+    "start": "node ./index.js"
+  },
+  "author": "Jimmy Chao",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "foreman": "^2.0.0"
+  }
+}
