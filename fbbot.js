@@ -3,8 +3,8 @@ import bodyParser from 'body-parser'
 import request from 'request'
 
 const config = {
-  VERIFY_TOKEN: process.env.VERIFY_TOKEN || 'beansauce',
-  PAGE_TOKEN: process.env.PAGE_TOKEN || 'beansauce',
+  VERIFY_TOKEN: process.env.VERIFY_TOKEN || 'token',
+  PAGE_TOKEN: process.env.PAGE_TOKEN || 'token',
 }
 
 const app = express()
@@ -25,9 +25,6 @@ app.post('/webhook', (req, res) => {
   console.log(req.body)
 
   req.body.entry.forEach((entry) => {
-    const pageID = entry.id
-    const time = entry.time
-
     entry.messaging.forEach((event) => {
       if (event.message) {
         sendTextMessage({
